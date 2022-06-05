@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cryptography dashborad</title>
+
+    <link rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #907790;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+  }
+  
+  i {
+    color: lightgray;
+  }
+  
+  h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header {
+    background-color: white;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+  header h1 {
+    color: black;
+    font-size: 1em;
+    padding-top: 29px;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  
+  header nav {
+    color: black;
+  }
+  
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    justify-items: center;
+  }
+  
+  header nav ul li {
+    padding: 0px;
+    margin-right: 10px;
+  }
+  
+  header nav ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.8em;
+  }
+  
+  header nav ul li a i {
+    color: black;
+    padding: 4px;
+  }
+  
+  header button {
+    height: 30px;
+    text-transform: capitalize;
+    padding: 0px 13px;
+    font-weight: 500;
+    font-size: 0.5em;
+    color: black;
+    background-color: transparent;
+    border: 1px solid #212020;
+    outline: none;
+    border-radius: 70px;
+    position: relative;
+    top: 63%;
+    right: 20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr 2fr;
+        grid-template-columns: 1fr 2fr 2fr;
+    -ms-grid-rows: 270px 280px;
+        grid-template-rows: 270px 280px;
+    grid-gap: 10px 10px;
+    margin-top: 10px;
+  }
+  
+  main #news, main #chart, main #profile, main .color, main .secondColor {
+    border-radius: 20px;
+  }
+  
+  main aside {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+    margin-left: 10px;
+  }
+  
+  main aside img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    left: 50%;
+    top: 15px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  
+  main aside h3 {
+    font-size: 0.2em;
+    padding-top: 20px;
+    padding-left: 8px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  .color {
+    background-color: #9E9680;
+  }
+  
+  .secondNav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 10px 0 20px 20px;
+  }
+  
+  .secondNav ul li {
+    padding: 1px 0px;
+    margin-right: 10px;
+  }
+  
+  .secondNav ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.6em;
+  }
+  
+  .secondNav ul li a i {
+    color: #000000a3;
+    padding: 6px;
+  }
+  
+  .secondNav ul li:last-child {
+    padding-top: 10px;
+  }
+  
+  .secondColor {
+    background: #005bea;
+    background: -webkit-gradient(linear, right top, left top, from(#005bea), to(#00c6fb));
+    background: linear-gradient(to left, #005bea 0%, #00c6fb 100%);
+  }
+  
+  .secondColor h4 {
+    font-size: 0.6em;
+    font-weight: 300;
+    padding: 17px;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+  }
+  
+  .secondColor h4 i {
+    color: black;
+    padding: 4px;
+  }
+  
+  
+  
+  #news h1 {
+    color: white;
+    padding: 10px 10px 0 10px;
+    text-transform: capitalize;
+    font-size: 1.2em;
+  }
+  
+  #news p {
+    color: #a7a2a2c4;
+    font-size: 0.8em;
+    padding: 0px 10px 0 10px;
+  }
+  
+  #news button {
+    background: #005bea;
+    background: -webkit-gradient(linear, right top, left top, from(#005bea), to(#00c6fb));
+    background: linear-gradient(to left, #005bea 0%, #00c6fb 100%);
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-size: 0.6em;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 70px;
+    margin-left: 10px;
+  }
+  
+  #chart {
+    width: 500px;
+    height: 500px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/ 3;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  #profile {
+    width: 400px;
+    height: 500px;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    margin-right: 10px;
+    background-color: #E9BA37;
+  }
+  
+  #profile h5 {
+    font-size: 0.8em;
+    padding-top: 17px;
+    text-align: center;
+    margin: 0px;
+  }
+  
+  #profile ul {
+    list-style: none;
+  }
+  
+  #profile ul li {
+    font-size: 0.6em;
+    padding: 4px 0;
+  }
+  
+  #profile ul li span {
+    margin-left: 12px;
+  }
+  
+    </style>
+    
+</head>
+
+<body>
+
+
+    <header>
+        <h1>crypto</h1>
+        <nav>
+            <ul>
+                <li><a href="">product <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
+                <li><a href="">company <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                <li><a href=""> help <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+        <button> log out</button>
+    </header>
+
+
+    <main>
+
+
+        <aside>
+
+            <section class="color">
+                <img src="logo-mockup.jpg" alt="">
+                <h3>good morning</h3>
+                <nav class="secondNav">
+                    <ul>
+                        <li><a href=""> <i class="fa fa-user-o" aria-hidden="true"> </i> profile </a></li>
+                        <li><a href=""> <i class="fa fa-university" aria-hidden="true"></i> wallet </a></li>
+                        <li><a href="">  <i class="fa fa-exchange" aria-hidden="true"></i> Exchange </a></li>
+                        <li><a href=""> <i class="fa fa-line-chart" aria-hidden="true"></i>  market </a></li>
+                        <li><a href=""> <i class="fa fa-bar-chart" aria-hidden="true"></i> investment </a></li>
+                        <li><a href=""> <i class="fa fa-credit-card-alt" aria-hidden="true"></i> payment </a></li>
+                        <li><a href=""> <i class="fa fa-cog" aria-hidden="true"></i>settings </a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="secondColor">
+                <h4> <i class="fa fa-toggle-on" aria-hidden="true"></i> dark theme</h4>
+            </section>
+
+        </aside>
+        <section id="news">
+            <h1> cryto dashboard</h1>
+            
+
+            <button> all templates</button>
+        </section>
+        <section id="chart">
+            <canvas id="myChart" ></canvas>
+
+        </section>
+
+        <section id="profile">
+          
+            <h5>Current Price</h5>
+            <ul>
+                <li> balance <span>$10574.67</span></li>
+                <li> Bitcoin <span>$172.50 </span></li>
+                <li> invested <span>$0.25</span></li>
+                <li> profit <span>$291.18	</span></li>
+                <li> USD profit <span>$65.39 </span></li>
+            </ul>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+    <script>
+
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ,'Jul' , 'Aug' ,'Sep'],
+                datasets: [{
+                    label: ' Price in $',
+                    data: [12, 19, 13, 7, 8, 10 ,6,18,16,20],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+</body>
+
+</html>
